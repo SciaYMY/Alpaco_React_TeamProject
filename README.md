@@ -4,11 +4,13 @@
 
 ## 시작하기
 
-1. Repository Clone
-   1. 프로젝트를 놓고 싶은 경로에 위치한다.
-   2. ```Bash
-      git clone [REPOSITORY_URL]
-      ```
+1. Fork or Clone 선택
+   - (Hard) Git Hub에서 `Fork` 한다. - pull request 필요
+   - (Easy) Repository Clone
+     1. 프로젝트를 놓고 싶은 경로에 위치한다.
+     2. ```Bash
+        git clone [REPOSITORY_URL]
+        ```
 2. ```Bash
    yarn install
    ```
