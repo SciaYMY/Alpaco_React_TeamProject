@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+<<<<<<< HEAD
 
 /* :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
@@ -72,3 +73,5 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 } */
+=======
+>>>>>>> 9c9e46cee8e439baaf2c72c414b13128aa5e5519

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from 'react';
 import { Book } from './components/Book';
 import { Nav } from './components/Nav';
@@ -26,12 +27,17 @@ const SampleData = {
     { id: 2, title: 'React Study', marks: [] },
   ],
 };
+=======
+import { Box } from './components/Box';
+import { Nav } from './components/Nav';
+>>>>>>> 9c9e46cee8e439baaf2c72c414b13128aa5e5519
 
 function App() {
   const [data, setData] = useState(SampleData);
 
   return (
     <div>
+<<<<<<< HEAD
       <header>
         <Nav />
       </header>
@@ -46,6 +52,21 @@ function App() {
         </div>
       </main>
       {/* <footer>Copyright Indiflex Senior Coding</footer> */}
+=======
+      <header className='p-6 bg-rose-100'>
+        <p className='text-xl font-bold'>HEADER</p>
+        <Nav />
+      </header>
+      <main className='p-6 bg-gray-100'>
+        <p className='text-xl font-bold'>BASIC BOX1</p>
+        <Box />
+      </main>
+      <footer className='p-6 bg-rose-100'>
+        <p className='text-xl font-bold'>FOOTER</p>
+        <h2>팀원</h2>
+        <p>경지혜, 문창일, 박문수, 양민영</p>
+      </footer>
+>>>>>>> 9c9e46cee8e439baaf2c72c414b13128aa5e5519
     </div>
   );
 }

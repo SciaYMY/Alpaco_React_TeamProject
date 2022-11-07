@@ -24,7 +24,7 @@
       ```
    2. 브랜치 이동하기
       ```Bash
-      git checkoust [BRANCH NAME]
+      git checkout [BRANCH NAME]
       ```
 
 ## 프로젝트 참여하기

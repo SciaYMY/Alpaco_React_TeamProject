@@ -25,3 +25,7 @@ dist-ssr
 
 # 추가
 public
+.vscode
+.prettierrc
+.eslintrc.cjs
+yarn.lock
