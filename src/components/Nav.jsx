@@ -7,7 +7,7 @@ export const Nav = () => {
       </div>
       <div>
         <ul>
-          <li className='bg-rose-800 p-2 text-xl text-white'>
+          <li className='bg-teal-800 p-2 text-xl text-white'>
             DROPBOX
             <ul>
               <li>드라마</li>

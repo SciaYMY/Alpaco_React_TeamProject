@@ -3,11 +3,11 @@ import { Nav } from './components/Nav';
 import { useData } from './hooks/data-context';
 
 function App() {
-  const { data, addBook } = useData();
+  const { data, addPost } = useData();
 
   return (
     <div>
-      <header className='bg-rose-100 p-6'>
+      <header className='bg-teal-100 p-6'>
         <p className='text-xl font-bold'>HEADER</p>
         <Nav />
       </header>
@@ -15,12 +15,14 @@ function App() {
         <div>
           <p className='text-xl font-bold'>BASIC BOX1</p>
           <div className='flex'>
-            {data.books.map((book_item) => (
-              <Box key={book_item.id} />
-            ))}
+            <div className='flex'>
+              {data.postContents.map((post_item) => (
+                <Box key={post_item.id} />
+              ))}
+            </div>
             <button
-              onClick={addBook}
-              className='float-right border bg-rose-900 p-2 text-white'
+              onClick={addPost}
+              className='h-[350px] bg-teal-900 p-2 text-white'
             >
               작성
             </button>
@@ -41,13 +43,13 @@ function App() {
                 <p>리뷰</p>
               </div>
             </section>
-            <button className='float-right border bg-rose-900 p-2 text-white'>
+            <button className='float-right border bg-teal-900 p-2 text-white'>
               작성
             </button>
           </div>
         </div>
       </main>
-      <footer className='bg-rose-100 p-6'>
+      <footer className='bg-teal-100 p-6'>
         <p className='text-xl font-bold'>FOOTER</p>
         <h2>팀원</h2>
         <p>경지혜, 문창일, 박문수, 양민영</p>
