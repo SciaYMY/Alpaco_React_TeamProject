@@ -1,12 +1,11 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import styles from '../../styles/components/DropDown.module.scss';
 
 export const DropDown = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className={styles.dropDownMenu}>
+    <div>
       <button onClick={() => setIsOpen(!isOpen)}>메뉴 보기</button>
 
       {isOpen && (
