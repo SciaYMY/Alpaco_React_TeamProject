@@ -1,10 +1,5 @@
-// eslint-disable-next-line no-undef
 module.exports = {
-  env: {
-    browser: true,
-    es2021: true,
-    node: true,
-  },
+  env: { browser: true, es2021: true, node: true },
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
@@ -27,5 +22,8 @@ module.exports = {
     'react/prop-types': 'off',
     'prettier/prettier': 'error',
     quotes: ['error', 'single', { allowTemplateLiterals: true }],
+  },
+  settings: {
+    react: { version: 'detect' }, // for react version warnning
   },
 };
