@@ -31,4 +31,14 @@
 
 - 항상 시작 전 `git pull`부터 한다.
 - 자신의 `branch`에서 작업을 한다.
-- 일정 구현이 완성되면 `git merge`
+- 일정 구현이 완성되면 `git merge` 하기
+
+## 사용 기술
+
+- React
+
+## 설치 프로그램
+
+- [TailwindCss](https://tailwindcss.com/docs/guides/vite)
+- [Heroicons](https://heroicons.com/)
+- [headlessui](https://www.npmjs.com/package/@headlessui/react)
