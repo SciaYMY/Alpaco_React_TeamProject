@@ -1,17 +1,12 @@
 import React from 'react';
 
-export const Box = () => {
-
-
+export const Box = ({ title, imageURL }) => {
   return (
     <section className='container'>
       <div id='contentWrap'>
+        <h3>{title}</h3>
         <p className='border'>이미지</p>
-        <img
-          src='https://upload.wikimedia.org/wikipedia/ko/thumb/f/f2/%EC%96%B4%EB%B2%A4%EC%A0%B8%EC%8A%A4-_%EC%97%94%EB%93%9C%EA%B2%8C%EC%9E%84_%ED%8F%AC%EC%8A%A4%ED%84%B0.jpg/800px-%EC%96%B4%EB%B2%A4%EC%A0%B8%EC%8A%A4-_%EC%97%94%EB%93%9C%EA%B2%8C%EC%9E%84_%ED%8F%AC%EC%8A%A4%ED%84%B0.jpg'
-          alt='어벤져스'
-          className='h-[600px]'
-        />
+        <img src={imageURL} alt={title} className='h-[600px]' />
         <p>리뷰</p>
       </div>
       <button className='float-right border bg-rose-900 p-2 text-white'>
@@ -20,5 +15,3 @@ export const Box = () => {
     </section>
   );
 };
-
-
