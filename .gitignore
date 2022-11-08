@@ -24,8 +24,5 @@ dist-ssr
 *.sw?
 
 # 추가
-public
 .vscode
-.prettierrc
-.eslintrc.cjs
-yarn.lock
+*.lock
