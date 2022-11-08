@@ -1,21 +1,19 @@
+// import { useReducer, useState } from 'react';
+// import { useData } from '../hooks/data-context';
+import DropDown from './DropDown';
+
 export const Nav = () => {
+
   return (
     <nav className='flex justify-between'>
       <div>
-        <h1 className='text-3xl'>3조</h1>
-        <h2>Alpaco React TeamProject</h2>
+        <link to='/'>
+          <h1 className='text-3xl'>3조</h1>
+          <h2>Alpaco React TeamProject</h2>
+        </link>
       </div>
       <div>
-        <ul>
-          <li className='bg-rose-800 p-2 text-xl text-white'>
-            DROPBOX
-            <ul>
-              <li>드라마</li>
-              <li>음악</li>
-              <li>영화</li>
-            </ul>
-          </li>
-        </ul>
+        <DropDown />
       </div>
     </nav>
   );

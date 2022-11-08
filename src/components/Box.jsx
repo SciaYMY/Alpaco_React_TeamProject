@@ -1,4 +1,8 @@
+import React from 'react';
+
 export const Box = () => {
+
+
   return (
     <section className='container'>
       <div id='contentWrap'>
@@ -10,9 +14,11 @@ export const Box = () => {
         />
         <p>리뷰</p>
       </div>
-      <button className='float-right p-2 border bg-rose-900 text-white'>
+      <button className='float-right border bg-rose-900 p-2 text-white'>
         작성
       </button>
     </section>
   );
 };
+
+
