@@ -1,4 +1,4 @@
-export const Box = () => {
+export const Box = ({ post, removePost }) => {
   return (
     <section className='mr-4 last:mr-0'>
       <div id='contentWrap'>
@@ -7,8 +7,15 @@ export const Box = () => {
           alt='어벤져스'
           className='h-[350px]'
         />
-        <p>리뷰</p>
+        <h2>{post.title}</h2>
+        <p>리뷰 내용</p>
       </div>
+      <button
+        onClick={() => removePost(post.id)}
+        className='bg-teal-900 p-2 text-white'
+      >
+        Remove
+      </button>
     </section>
   );
 };

@@ -3,7 +3,7 @@ import { Nav } from './components/Nav';
 import { useData } from './hooks/data-context';
 
 function App() {
-  const { data, addPost } = useData();
+  const { data, addPost, removePost } = useData();
 
   return (
     <div>
@@ -17,7 +17,11 @@ function App() {
           <div className='flex'>
             <div className='flex'>
               {data.postContents.map((post_item) => (
-                <Box key={post_item.id} />
+                <Box
+                  key={post_item.id}
+                  post={post_item}
+                  removePost={removePost}
+                />
               ))}
             </div>
             <button
@@ -40,6 +44,7 @@ function App() {
                   alt='into the night'
                   className='h-[350px]'
                 />
+                <h2>Into the Night</h2>
                 <p>리뷰</p>
               </div>
             </section>

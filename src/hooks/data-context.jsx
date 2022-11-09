@@ -1,7 +1,10 @@
 import { createContext, useContext, useState } from 'react';
 
 const SampleData = {
-  postContents: [{ id: 1, title: 'First Post', marks: [] }],
+  postContents: [
+    { id: 1, title: 'First Post', marks: [] },
+    { id: 2, title: '어벤져스 엔드게임', marks: [] },
+  ],
 };
 const DataContext = createContext();
 export const DataProvider = ({ children }) => {
@@ -12,9 +15,17 @@ export const DataProvider = ({ children }) => {
       postContents: [...data.postContents, { id: 0, title: '제목', marks: [] }],
     });
   };
+  const removePost = (rmPostId) => {
+    setData({
+      ...data,
+      postContents: [
+        ...data.postContents.filter((_post) => _post.id !== rmPostId),
+      ],
+    });
+  };
 
   return (
-    <DataContext.Provider value={{ data, addPost }}>
+    <DataContext.Provider value={{ data, addPost, removePost }}>
       {children}
     </DataContext.Provider>
   );
