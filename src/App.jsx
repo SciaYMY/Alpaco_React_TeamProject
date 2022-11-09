@@ -3,7 +3,7 @@ import { Nav } from './components/Nav';
 import { useData } from './hooks/data-context';
 
 function App() {
-  const { data, addPost, removePost } = useData();
+  const { data, addPost, removePost, savePost } = useData();
 
   return (
     <div>
@@ -11,7 +11,7 @@ function App() {
         <p className='text-xl font-bold'>HEADER</p>
         <Nav />
       </header>
-      <main className='bg-gray-100 p-6'>
+      <main className='bg-gray-100 p-6 pb-[350px]'>
         <div>
           <p className='text-xl font-bold'>BASIC BOX1</p>
           <div className='flex'>
@@ -21,6 +21,7 @@ function App() {
                   key={post_item.id}
                   post={post_item}
                   removePost={removePost}
+                  savePost={savePost}
                 />
               ))}
             </div>
@@ -33,7 +34,7 @@ function App() {
           </div>
         </div>
 
-        <div>
+        {/* <div>
           <p className='text-xl font-bold'>BASIC BOX2</p>
           <div className='flex'>
             <section className=''>
@@ -52,7 +53,7 @@ function App() {
               작성
             </button>
           </div>
-        </div>
+        </div> */}
       </main>
       <footer className='bg-teal-100 p-6'>
         <p className='text-xl font-bold'>FOOTER</p>
