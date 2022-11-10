@@ -1,8 +1,13 @@
-import { useRef, useState, useReducer } from 'react';
+import { useRef, useState, useReducer, useEffect } from 'react';
 
 export const Box = ({ post, removePost, savePost }) => {
   const contentWrap = useRef();
-  // const contentWrapWidth = contentWrap.current.offsetWidth;
+  const [contentWrapWidth, setContentWrapWidth] = useState(0);
+  useEffect(() => {
+    console.log('aa>>', contentWrap.current.offsetWidth);
+    setContentWrapWidth(contentWrap.current.offsetWidth);
+  }, []);
+
   const editWrap = useRef();
   // const editWrapClassName = editWrap.current.classNameh;
 
@@ -45,22 +50,23 @@ export const Box = ({ post, removePost, savePost }) => {
         <div
           id='editWrap'
           ref={editWrap}
-          className='border-8 border-teal-900 my-4 w-1/2 absolute'
+          className={`border-8 border-teal-900 my-4 w-[${
+            contentWrapWidth - 26
+          }px] absolute`}
         >
           <div className='p-2'>
             <div id='inputTitleWrap' className='flex justify-between mb-2'>
               <label htmlFor='postTitle' className='mr-2'>
-                Title :
+                <input
+                  id='postTitle'
+                  type='text'
+                  value={postTitle}
+                  onChange={(evt) => {
+                    setPostTitle(evt.target.value);
+                  }}
+                  className='w-full'
+                />
               </label>
-              <input
-                id='postTitle'
-                type='text'
-                value={postTitle}
-                onChange={(evt) => {
-                  setPostTitle(evt.target.value);
-                }}
-                className='w-10/12'
-              />
             </div>
             <div id='inputContentsWrap'>
               <label htmlFor='postContent' className='mr-2'>
@@ -73,7 +79,6 @@ export const Box = ({ post, removePost, savePost }) => {
                 onChange={(evt) => {
                   setPostValue(evt.target.value);
                 }}
-                cols='45'
                 rows='8'
                 className='w-full'
               ></textarea>
